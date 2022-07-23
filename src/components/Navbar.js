@@ -3,7 +3,7 @@ import Characters from './Characters'
 
 const Navbar = ({inGame, inHome, inLeaderboard, characters}) => {
 
-    let gameCharacter = characters.map((character) => {
+    let gameCharacters = characters.map((character) => {
         return (
             <Characters 
                 name={character.name} 
@@ -13,22 +13,22 @@ const Navbar = ({inGame, inHome, inLeaderboard, characters}) => {
 
     if (inHome === true) {
         return(
-            <div className="navbar-home">
+            <div className="nav-home">
                 <h2 className="nav-button-1 game-title"> Where's Senpai? </h2>
                 <p className="nav-button-2"> Leaderboard </p>
             </div>
         )
     } else if ( inGame === true) {
         return (
-            <div className="navbar-game">
+            <div className="nav-in-game">
                 <p className="nav-button-1"> Home </p>
-                {/* <Characters/> */}
+                <div className="nav-char-container">{gameCharacters}</div>
                 <p className="nav-button-2"> Leaderboard </p>
             </div>
         )
     } else if ( inLeaderboard === true) {
         return (
-            <div className="navbar-leaderboard">
+            <div className="nav-in-leaderboard">
                 <p className="nav-button-1"> Home </p>
             </div>
         )
