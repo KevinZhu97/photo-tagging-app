@@ -1,38 +1,41 @@
-import Characters from './Characters'
+import Character from './Characters'
 
-
+//where do we pull characters from
 const Navbar = ({inGame, inHome, inLeaderboard, characters}) => {
 
     let gameCharacters = characters.map((character) => {
         return (
-            <Characters 
-                name={character.name} 
+            <Character
+                name={character} 
+                key={character}
             />
         )
     })
 
     if (inHome === true) {
         return(
-            <div className="nav-home">
+            <div className="nav">
                 <h2 className="nav-button-1 game-title"> Where's Senpai? </h2>
                 <p className="nav-button-2"> Leaderboard </p>
             </div>
         )
     } else if ( inGame === true) {
         return (
-            <div className="nav-in-game">
+            <div className="nav">
                 <p className="nav-button-1"> Home </p>
-                <div className="nav-char-container">{gameCharacters}</div>
+                <div className="nav-char-container"> { gameCharacters } </div>
                 <p className="nav-button-2"> Leaderboard </p>
             </div>
         )
     } else if ( inLeaderboard === true) {
         return (
-            <div className="nav-in-leaderboard">
+            <div className="nav">
                 <p className="nav-button-1"> Home </p>
             </div>
         )
     }
 }
+
+//set all nav container into the same class
 
 export default Navbar;

@@ -1,10 +1,15 @@
 /* Characters.js */
 
 .character-container {
-
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    align-items: center;
 }
 
 .character-image {
+    height: 6rem;
+    width: 6rem;
 
 }
 
@@ -14,20 +19,18 @@
 
 /* Navbar.js */
 
-.nav-home {
-
-}
-
-.nav-in-game {
-
-}
-
-.nav-in-leaderboard {
-
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1rem;
+    
 }
 
 .nav-char-container {
-
+    display: flex;
+    
 }
 
 .nav-button-1 {
@@ -39,5 +42,21 @@
 }
 
 .game-title {
-    
+
+}
+
+/* LevelCard.js */
+
+.board-container {
+    padding: 10px;
+}
+
+.board-image {
+    height: 20rem;
+    width: 40rem;
+    border-radius: 10px;
+}
+
+.board-level {
+
 }
