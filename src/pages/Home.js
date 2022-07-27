@@ -1,5 +1,6 @@
 import LevelCard from '../components/LevelCard'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
 
 const Home = ({
     setLevel,
@@ -9,13 +10,15 @@ const Home = ({
     setInHome,
 }) => {
 
-    setInHome(true);
-    setInLeaderboard(false);
-    setInGame(false);
+    useEffect(()=>{
+        setInHome(true);
+        setInLeaderboard(false);
+        setInGame(false);
+    })
 
     const boards = Object.keys(levelData).map((index) => {
+    
         const board = levelData[index]
-        const characters = board.characters;
         const key = `${board.name}`;
 
         return(
@@ -24,7 +27,7 @@ const Home = ({
                     image={board.board}
                     handleClick={()=>{
                         setInGame(true);
-                        setLevel(board.level);
+                        setLevel(index);
                     }}
                     alt={`${board.level + " " + board.name}`}
                     level={board.name}

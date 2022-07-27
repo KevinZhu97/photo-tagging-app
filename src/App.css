@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 /* Characters.js */
 
 .character-container {
@@ -59,4 +63,14 @@
 
 .board-level {
 
+}
+
+/* Game.hs */
+
+.board-display-container {
+    width: 100vw;
+}
+
+.board-display {
+    width: 100vw;
 }

@@ -1,13 +1,22 @@
-import Character from './Characters'
+import Character from './Characters';
+import { Link } from 'react-router-dom';
 
 //where do we pull characters from
-const Navbar = ({inGame, inHome, inLeaderboard, characters}) => {
+const Navbar = ({
+    inGame, 
+    inHome, 
+    inLeaderboard, 
+    characters
+}) => {
+
 
     let gameCharacters = characters.map((character) => {
+        console.log(characters)
         return (
             <Character
-                name={character} 
-                key={character}
+
+                name={character.name} 
+                key={character.name}
             />
         )
     })
@@ -22,7 +31,7 @@ const Navbar = ({inGame, inHome, inLeaderboard, characters}) => {
     } else if ( inGame === true) {
         return (
             <div className="nav">
-                <p className="nav-button-1"> Home </p>
+                <Link to='/'> <p className="nav-button-1"> Home </p> </Link>
                 <div className="nav-char-container"> { gameCharacters } </div>
                 <p className="nav-button-2"> Leaderboard </p>
             </div>
