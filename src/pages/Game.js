@@ -27,7 +27,7 @@ const Game = ({
         setImage(allLevelData[level].board)
         setCharacters(loadedCharacters)
 
-    }, [level, levelData])
+    }, [level, levelData, setCharacters])
 
     return(
         <div className="board-display-container">

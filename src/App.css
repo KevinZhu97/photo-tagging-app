@@ -74,3 +74,32 @@ body {
 .board-display {
     width: 100vw;
 }
+
+/* Leaderboard.js */
+
+.leaderboard-container {
+    
+}
+
+.leaderboard-levels-grid {
+    display: flex;
+}
+
+.level-name {
+
+}
+
+/* Card.js */
+
+.card-container {
+
+}
+
+.leaderboard-card {
+    height: 15rem;
+    width: 25rem;
+}
+
+.leaderboard-card-name {
+
+}

@@ -6,6 +6,7 @@ import allLevelData from './allLevelData'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Game from './pages/Game'
+import Leaderboard from './pages/Leaderboard'
 
 function App() {
 
@@ -44,6 +45,13 @@ function App() {
               <Game
                 level={level}
                 setCharacters={setCharacters}
+                setInHome={setInHome}
+                setInGame={setInGame}
+                setInLeaderboard={setInLeaderboard}
+              />}
+            />
+            <Route path="/leaderboard" element={
+              <Leaderboard
                 setInHome={setInHome}
                 setInGame={setInGame}
                 setInLeaderboard={setInLeaderboard}

@@ -9,12 +9,10 @@ const Navbar = ({
     characters
 }) => {
 
-
     let gameCharacters = characters.map((character) => {
         console.log(characters)
         return (
-            <Character
-
+            <Character  
                 name={character.name} 
                 key={character.name}
             />
@@ -25,7 +23,7 @@ const Navbar = ({
         return(
             <div className="nav">
                 <h2 className="nav-button-1 game-title"> Where's Senpai? </h2>
-                <p className="nav-button-2"> Leaderboard </p>
+                <Link to='/leaderboard'> <p className="nav-button-2"> Leaderboard </p> </Link>
             </div>
         )
     } else if ( inGame === true) {
@@ -33,13 +31,13 @@ const Navbar = ({
             <div className="nav">
                 <Link to='/'> <p className="nav-button-1"> Home </p> </Link>
                 <div className="nav-char-container"> { gameCharacters } </div>
-                <p className="nav-button-2"> Leaderboard </p>
+                <Link to='/leaderboard' className="nav-button-2"> <p className="nav-button-2"> Leaderboard </p> </Link>
             </div>
         )
     } else if ( inLeaderboard === true) {
         return (
             <div className="nav">
-                <p className="nav-button-1"> Home </p>
+                <Link to='/'> <p className="nav-button-1"> Home </p> </Link>
             </div>
         )
     }
