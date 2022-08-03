@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/KevinZhu97/photo-tagging-app.git/static/css/main.f6226f07.css",
-    "main.js": "/KevinZhu97/photo-tagging-app.git/static/js/main.bf77937f.js",
-    "static/media/hard-board.jpg": "/KevinZhu97/photo-tagging-app.git/static/media/hard-board.81e70a5a0a47b16914b4.jpg",
-    "static/media/normal-board.png": "/KevinZhu97/photo-tagging-app.git/static/media/normal-board.39707f2d350e06931038.png",
-    "static/media/easy-board.png": "/KevinZhu97/photo-tagging-app.git/static/media/easy-board.c443acae0d3e39f76389.png",
-    "static/media/rei-miyamoto-highschool-dxd.png": "/KevinZhu97/photo-tagging-app.git/static/media/rei-miyamoto-highschool-dxd.35b11b095bf617e1ec13.png",
-    "static/media/mikasa-attack-on-titan.png": "/KevinZhu97/photo-tagging-app.git/static/media/mikasa-attack-on-titan.24549b6da790dcfcb26f.png",
-    "static/media/roy-mustang-fma.png": "/KevinZhu97/photo-tagging-app.git/static/media/roy-mustang-fma.4713420c64d5ab71c232.png",
-    "static/media/faye-valentine-cowboy-bebop.png": "/KevinZhu97/photo-tagging-app.git/static/media/faye-valentine-cowboy-bebop.3f66858c963f24506a8f.png",
-    "static/media/akame-ga-kill.png": "/KevinZhu97/photo-tagging-app.git/static/media/akame-ga-kill.68a14b0747c378e87f66.png",
-    "static/media/meiko-honma-anohana.png": "/KevinZhu97/photo-tagging-app.git/static/media/meiko-honma-anohana.2dd78feee445eacf3f54.png",
-    "static/media/monokuma.png": "/KevinZhu97/photo-tagging-app.git/static/media/monokuma.53b9e4ce9cc78bbbf63e.png",
-    "static/media/arita-haruyuki-accel-world.png": "/KevinZhu97/photo-tagging-app.git/static/media/arita-haruyuki-accel-world.c4a8e390415fb770aeec.png",
-    "static/media/shinya-kogami-psycho-pass.png": "/KevinZhu97/photo-tagging-app.git/static/media/shinya-kogami-psycho-pass.2b120ae708fa19951dc8.png",
-    "index.html": "/KevinZhu97/photo-tagging-app.git/index.html",
-    "main.f6226f07.css.map": "/KevinZhu97/photo-tagging-app.git/static/css/main.f6226f07.css.map",
-    "main.bf77937f.js.map": "/KevinZhu97/photo-tagging-app.git/static/js/main.bf77937f.js.map"
+    "main.css": "/photo-tagging-app/static/css/main.f6226f07.css",
+    "main.js": "/photo-tagging-app/static/js/main.823ea16b.js",
+    "static/media/hard-board.jpg": "/photo-tagging-app/static/media/hard-board.81e70a5a0a47b16914b4.jpg",
+    "static/media/normal-board.png": "/photo-tagging-app/static/media/normal-board.39707f2d350e06931038.png",
+    "static/media/easy-board.png": "/photo-tagging-app/static/media/easy-board.c443acae0d3e39f76389.png",
+    "static/media/rei-miyamoto-highschool-dxd.png": "/photo-tagging-app/static/media/rei-miyamoto-highschool-dxd.35b11b095bf617e1ec13.png",
+    "static/media/mikasa-attack-on-titan.png": "/photo-tagging-app/static/media/mikasa-attack-on-titan.24549b6da790dcfcb26f.png",
+    "static/media/roy-mustang-fma.png": "/photo-tagging-app/static/media/roy-mustang-fma.4713420c64d5ab71c232.png",
+    "static/media/faye-valentine-cowboy-bebop.png": "/photo-tagging-app/static/media/faye-valentine-cowboy-bebop.3f66858c963f24506a8f.png",
+    "static/media/akame-ga-kill.png": "/photo-tagging-app/static/media/akame-ga-kill.68a14b0747c378e87f66.png",
+    "static/media/meiko-honma-anohana.png": "/photo-tagging-app/static/media/meiko-honma-anohana.2dd78feee445eacf3f54.png",
+    "static/media/monokuma.png": "/photo-tagging-app/static/media/monokuma.53b9e4ce9cc78bbbf63e.png",
+    "static/media/arita-haruyuki-accel-world.png": "/photo-tagging-app/static/media/arita-haruyuki-accel-world.c4a8e390415fb770aeec.png",
+    "static/media/shinya-kogami-psycho-pass.png": "/photo-tagging-app/static/media/shinya-kogami-psycho-pass.2b120ae708fa19951dc8.png",
+    "index.html": "/photo-tagging-app/index.html",
+    "main.f6226f07.css.map": "/photo-tagging-app/static/css/main.f6226f07.css.map",
+    "main.823ea16b.js.map": "/photo-tagging-app/static/js/main.823ea16b.js.map"
   },
   "entrypoints": [
     "static/css/main.f6226f07.css",
-    "static/js/main.bf77937f.js"
+    "static/js/main.823ea16b.js"
   ]
 }
