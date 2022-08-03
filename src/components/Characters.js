@@ -4,10 +4,10 @@ import Monokuma from '../assets/characters/monokuma.png'
 import Rei from '../assets/characters/rei-miyamoto-highschool-dxd.png'
 //level 2
 import Mikasa from '../assets/characters/mikasa-attack-on-titan.png'
-import Faye from '../assets/characters/faye-valentine-cowboy-bebop.png'
+import Meiko from '../assets/characters/meiko-honma-anohana.png'
 import Shinya from '../assets/characters/shinya-kogami-psycho-pass.png'
 // level 3
-import Meiko from '../assets/characters/meiko-honma-anohana.png'
+import Faye from '../assets/characters/faye-valentine-cowboy-bebop.png'
 import Arita from '../assets/characters/arita-haruyuki-accel-world.png'
 import Roy from '../assets/characters/roy-mustang-fma.png'
 
@@ -44,10 +44,9 @@ const Character = (props) => {
         default:
             break;
     }
-
     return(
         <div className="character-container">
-            <img className="character-image" src={image} alt={props.name}/>
+            <img className={`character-image ${props.found ? 'faded' : ''}`} src={image} alt={props.name}/>
             <p className='character-name'>{props.name}</p>
         </div>
     )

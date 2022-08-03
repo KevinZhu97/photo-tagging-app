@@ -11,20 +11,20 @@ const levelData = {
             {
                 name: "Akame",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 92,
+                yCoord: 78,
             },
             {
                 name: "Monokuma",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 35,
+                yCoord: 41,
             },
             {
                 name: "Rei",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 61,
+                yCoord: 49,
             }
         ]
     },
@@ -36,20 +36,20 @@ const levelData = {
             {
                 name: "Mikasa",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 90,
+                yCoord: 22,
             },
             {
-                name: "Faye",
+                name: "Meiko",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 54,
+                yCoord: 51,
             },
             {
                 name: "Shinya",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 40,
+                yCoord: 48,
             }
         ]
     },
@@ -59,22 +59,22 @@ const levelData = {
         board: hardBoard,
         characters: [
             {
-                name: "Meiko",
+                name: "Faye",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 11,
+                yCoord: 72,
             },
             {
                 name: "Arita",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 52,
+                yCoord: 65,
             },
             {
                 name: "Roy",
                 found: false,
-                xCoord: 10,
-                yCoord: 10,
+                xCoord: 93,
+                yCoord: 4,
             }
         ]
     }

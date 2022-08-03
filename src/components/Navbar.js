@@ -10,9 +10,9 @@ const Navbar = ({
 }) => {
 
     let gameCharacters = characters.map((character) => {
-        console.log(characters)
         return (
             <Character  
+                found={character.found}
                 name={character.name} 
                 key={character.name}
             />

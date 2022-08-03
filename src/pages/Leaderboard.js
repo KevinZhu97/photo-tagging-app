@@ -42,7 +42,9 @@ const Leaderboard = ({
 
     return(
         <div className="leaderboard-container">
-            <div className="leaderboard-levels-grid"> <Levels/> </div>
+            <div className="leaderboard-levels-grid"> 
+                <Levels/> 
+            </div>
             <span className="level-name"></span>
             <LeaderboardTable/>
         </div>

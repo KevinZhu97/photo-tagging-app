@@ -1,5 +1,6 @@
-body {
+body, html {
     margin: 0;
+    position: relative;
 }
 
 /* Characters.js */
@@ -12,24 +13,29 @@ body {
 }
 
 .character-image {
-    height: 6rem;
-    width: 6rem;
+    height: 4rem;
+    width: 5rem;
 
 }
 
 .character-name {
+    padding: 0px;
+}
 
+.faded {
+    opacity: .3;
 }
 
 /* Navbar.js */
 
-.nav{
+.nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid black;
-    padding: 1rem;
-    
+    min-height: 140px;
+    max-height: 140px;
+    width: 100vw;
 }
 
 .nav-char-container {
@@ -72,7 +78,7 @@ body {
 }
 
 .board-display {
-    width: 100vw;
+    width: 100%;
 }
 
 /* Leaderboard.js */
@@ -101,5 +107,49 @@ body {
 }
 
 .leaderboard-card-name {
+
+}
+
+/* CharacterDropdown.js */
+
+.character-dropdown-a {
+    text-decoration: none;
+    
+}
+
+.character-dropdown-div {
+    display: flex;
+    background-color: rgba(232, 235, 237, 0.7);
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    
+    
+}
+
+.character-dropdown-img {
+    height: 2rem;
+    width: 2rem;
+    padding: 5px;
+
+}
+
+.character-dropdown-container {
+}
+
+.character-dropdown-menu {
+}
+
+
+/* extra */
+
+.absolute {
+    position: absolute;
+
+}
+
+.hidden {
+    display: none;
 
 }

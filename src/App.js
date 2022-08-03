@@ -16,9 +16,11 @@ function App() {
   const [characters, setCharacters] = useState([])
   const [level, setLevel] = useState(0);
   const [levelData, setLevelData] = useState(allLevelData)
+  const [username, setUsername] = useState('')
 
-  // console.log(levelData[level]);
-
+  const handleUpdateUsername = (e) => {
+    setUsername(e.target.value)
+  }
 
   return (
     <div className="App">
@@ -43,11 +45,14 @@ function App() {
             />
             <Route path="/game" element={
               <Game
+                characters={characters}
                 level={level}
                 setCharacters={setCharacters}
                 setInHome={setInHome}
                 setInGame={setInGame}
                 setInLeaderboard={setInLeaderboard}
+                username={username}
+                updateUsername={handleUpdateUsername}
               />}
             />
             <Route path="/leaderboard" element={
