@@ -78,7 +78,7 @@ const Game = ({
             level: highscoreData.level,
             time: highscoreData.elapsedSeconds,
             date: highscoreData.date,
-            username: username
+            name: username,
         }
         firestore.collection("highscores").add(newHighscore)
     }

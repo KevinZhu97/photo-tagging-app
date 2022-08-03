@@ -1,19 +1,41 @@
+import { useEffect, useState } from 'react'
+import { firestore } from '../firebase'
+
 const LeaderboardTable = (props) => {
 
-    // const Values = () => 
-    //     props.values.length && props.values
-    //         .filter((value) => value.level === props.level)
-    //         .map((value, index) => (
-    //             <tr key={value.gameId} className="leaderboard-row">
-    //                 <td className="leaderboard-place-cell"> {index + 1}</td>
-    //                 <td className="leaderboard-name-cell">
-    //                     <div className="leaderboard-name-text"> {value.name} </div>
-    //                 </td>
-    //                 <td className="leaderboard-time-cell"> {value.time} </td>
-    //                 <td className="leaderboard-time-cell"> {value.date} </td>
-    //             </tr>
-    //         ))
+    const [leaderboardData, setLeaderboardData] = useState([]);
+
+    useEffect(()=>{
+        const getLeaderboardData = async () => {
+            const leaderArray= [];
+            const firestoreData = await firestore.collection('highscores').get();
+            console.log(firestoreData)
+            firestoreData.forEach((doc)=> {
+                leaderArray.push(doc.data())
+            })
+            setLeaderboardData(leaderArray)
+        }
+        getLeaderboardData();
+    }, []);
+
+    console.log(leaderboardData)
+
+    const Values = () => 
+        leaderboardData
+            // .filter((value) => value.level === props.level)
+            .map((value, index) => (
+                <tr key={value.gameId} className="leaderboard-row">
+                    <td className="leaderboard-place-cell"> {index + 1}</td>
+                    <td className="leaderboard-name-cell">
+                        <div className="leaderboard-name-text"> {value.name} </div>
+                    </td>
+                    <td className="leaderboard-time-cell"> {value.time} </td>
+                    <td className="leaderboard-time-cell"> {value.date} </td>
+                </tr>
+            ))
     
+
+
 
 
 
@@ -56,7 +78,8 @@ const LeaderboardTable = (props) => {
                     </tr>
                 </thead>
                 <tbody className="leaderboard-table-body">
-                    {/* <Values/>  */}
+                    <Values/> 
+                    
                 </tbody>
             </table>
         </div>
