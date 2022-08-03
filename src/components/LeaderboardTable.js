@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { firestore } from '../firebase'
 
-const LeaderboardTable = (props) => {
+const LeaderboardTable = ({level}) => {
+
+    console.log(level)
 
     const [leaderboardData, setLeaderboardData] = useState([]);
 
@@ -9,7 +11,6 @@ const LeaderboardTable = (props) => {
         const getLeaderboardData = async () => {
             const leaderArray= [];
             const firestoreData = await firestore.collection('highscores').get();
-            console.log(firestoreData)
             firestoreData.forEach((doc)=> {
                 leaderArray.push(doc.data())
             })
@@ -18,13 +19,11 @@ const LeaderboardTable = (props) => {
         getLeaderboardData();
     }, []);
 
-    console.log(leaderboardData)
-
     const Values = () => 
         leaderboardData
-            // .filter((value) => value.level === props.level)
+            .filter((value) => value.level === level)
             .map((value, index) => (
-                <tr key={value.gameId} className="leaderboard-row">
+                <tr key={value.name} className="leaderboard-row">
                     <td className="leaderboard-place-cell"> {index + 1}</td>
                     <td className="leaderboard-name-cell">
                         <div className="leaderboard-name-text"> {value.name} </div>

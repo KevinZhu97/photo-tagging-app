@@ -15,7 +15,7 @@ function App() {
   const [inLeaderboard, setInLeaderboard] = useState(false)
   const [characters, setCharacters] = useState([])
   const [level, setLevel] = useState(0);
-  const [levelData, setLevelData] = useState(allLevelData)
+  const [levelData] = useState(allLevelData)
   const [username, setUsername] = useState('')
 
   const handleUpdateUsername = (e) => {
@@ -60,6 +60,8 @@ function App() {
                 setInHome={setInHome}
                 setInGame={setInGame}
                 setInLeaderboard={setInLeaderboard}
+                setLevel={setLevel}
+                level={level}
               />}
             />
           </Routes>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, UseEffect, useState } from 'react'
+import { useEffect } from 'react'
 import LeaderboardTable from '../components/LeaderboardTable'
 import allLevelData from '../allLevelData'
 import Card from '../components/Card'
@@ -11,20 +11,18 @@ const Leaderboard = ({
     setInGame,
     setInLeaderboard,
 }) => {
-    
-    const [leaderboardData, setLeaderboardData] = useState([])
-    
+        
     useEffect(()=>{
         setInHome(false)
         setInGame(false)
         setInLeaderboard(true)
     })
-    
+
 
     let levelsArr = Object.keys(allLevelData).map((index) => {
         const number = parseInt(index)
         const level = allLevelData[number]
-        return { name: level.name, image: level.board, number, index}
+        return { name: level.name, image: level.board, stage: level.level, number, index}
     })
 
     const Levels = () => {
@@ -33,7 +31,7 @@ const Leaderboard = ({
                 <Card 
                     img={i.image}
                     alt={i.name}
-                    clicked={()=>setLevel(i.number)}
+                    clicked={()=> setLevel(i.stage)}
                     key={i.index}
                 />
             )
@@ -46,7 +44,7 @@ const Leaderboard = ({
                 <Levels/> 
             </div>
             <span className="level-name"></span>
-            <LeaderboardTable/>
+            <LeaderboardTable level={level}/>
         </div>
     )
 }
