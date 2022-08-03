@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Modal = ({
     showModal,
     seconds,
@@ -21,7 +23,7 @@ const Modal = ({
             ></input>
             <div className="button-container">
                 <button> Cancel </button>
-                <button onClick={submitScore}> Submit score </button>
+                <Link to='/leaderboard'> <button onClick={submitScore}> Submit score </button> </Link>
             </div>
         </div>
     )

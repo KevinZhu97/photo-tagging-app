@@ -14,7 +14,7 @@ function App() {
   const [inGame, setInGame] = useState(false);
   const [inLeaderboard, setInLeaderboard] = useState(false)
   const [characters, setCharacters] = useState([])
-  const [level, setLevel] = useState(0);
+  const [level, setLevel] = useState(1);
   const [levelData] = useState(allLevelData)
   const [username, setUsername] = useState('')
 
@@ -53,6 +53,7 @@ function App() {
                 setInLeaderboard={setInLeaderboard}
                 username={username}
                 updateUsername={handleUpdateUsername}
+                setLevel={setLevel}
               />}
             />
             <Route path="/leaderboard" element={

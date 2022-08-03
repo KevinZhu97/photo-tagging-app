@@ -15,6 +15,7 @@ const Game = ({
     setCharacters,
     updateUsername,
     username,
+    setLevel,
 }) => {
 
     console.log(username)
@@ -72,7 +73,6 @@ const Game = ({
     const submitScore = async () => {
         const highscoreRef = await firestore.collection("games").doc(gameId).get();
         const highscoreData = highscoreRef.data();
-        console.log(highscoreData)
         const newHighscore = {
             gameId,
             level: highscoreData.level,
@@ -81,6 +81,7 @@ const Game = ({
             name: username,
         }
         firestore.collection("highscores").add(newHighscore)
+        setLevel(highscoreData.level)
     }
 
     useEffect(()=>{
@@ -127,11 +128,6 @@ const Game = ({
 
         hideDropdown();
     }
-
-    //     // check for character on server
-    //     firestore.collection("playerSelection").add(gameSelection);
-    //     hideDropdown();
-    // };
 
     const hideDropdown = () => setShowDropdown(false)
 
